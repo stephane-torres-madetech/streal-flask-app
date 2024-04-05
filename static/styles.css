@@ -1,6 +1,10 @@
-nav a {
-    color: #d64161;
-    font-size: 3em;
-    margin-left: 50px;
-    text-decoration: none;
-}
+:root {
+    --primary-text-colour-500: #3c5cc2;
+    --primary-backgroud-colour-50: #e9ecf8;
+    --complementary-colour-800: #c2a33c;
+    --complementary-colour-500: #fbe04d;
+    --secondary-colour-triadic-500: #a33cc2;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  
