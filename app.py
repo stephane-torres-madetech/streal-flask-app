@@ -1,4 +1,5 @@
 from flask import Flask, render_template, g
+import os
 
 app = Flask(__name__)
 
@@ -19,7 +20,8 @@ def hello():
 
 @app.route("/gallery/")
 def gallery():
-    return render_template('gallery.html')
+    images = os.listdir(os.path.join(app.static_folder, 'imgs/gallery_images'))
+    return render_template('gallery.html', images=images)
 
 @app.route('/info/')
 def info():

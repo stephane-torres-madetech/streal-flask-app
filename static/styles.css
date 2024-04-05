@@ -81,6 +81,15 @@ body {
         text-align: center;
       }
     }
+
+    /* Gallery Styles */
+    .gallery{
+        img{
+            min-width: 50%;
+            max-width: 75%;
+            height: auto;
+        }
+    }
   }
 }
 

@@ -2,4 +2,11 @@
 
 {% block content %}
     <h1>{% block title %}Gallery{% endblock %}</h1>
+    <section class="gallery">
+        {% for image in images %}
+            <div class="card">
+                <img src="{{url_for('static', filename='imgs/gallery_images/' + image)}}" alt="">
+            </div>
+        {% endfor %}
+    </section>
 {% endblock %}
