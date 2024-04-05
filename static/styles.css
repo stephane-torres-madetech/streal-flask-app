@@ -6,12 +6,12 @@
   --secondary-colour-triadic-500: #a33cc2;
   font-family: Arial, Helvetica, sans-serif;
 }
-/* input[type="radio"] {
+input[type="radio"] {
   display: none;
-} */
+}
 
-#not:checked ~ .emoji-not,
-#hot:checked ~ .emoji-hot {
+#not:checked + .emoji-not,
+#hot:checked + .emoji-hot {
   font-size: 4rem;
 }
 
