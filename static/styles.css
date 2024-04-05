@@ -23,7 +23,7 @@ body {
   }
 }
 
-@media screen and (max-width="633px") {
+@media screen and (max-width: 633px) {
   body {
     display: grid;
     grid-template-columns: 1fr;
@@ -39,5 +39,5 @@ body {
   }
 }
 
-@media screen and (min-width="749px") {
+@media screen and (min-width: 749px) {
 }
