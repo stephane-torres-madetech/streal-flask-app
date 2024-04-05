@@ -1,27 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{% block title %}{% endblock %}</title>
-    <style>
-        nav a {
-            color: #d64161;
-            font-size: 3em;
-            margin-left: 50px;
-            text-decoration: none;
-        }
-    </style>
-</head>
-<body>
+    <link rel="stylesheet" href="{{url_for('static', filename='styles.css')}}" />
+  </head>
+  <body>
     <nav>
-        
-            <a href="{{url_for('hello')}}">Home</a>
-            <a href="{{url_for('gallery')}}">Gallery</a>
-        
+      <a href="{{url_for('hello')}}">Home</a>
+      <a href="{{url_for('gallery')}}">Gallery</a>
     </nav>
-    <div class="content">
-        {% block content %}{% endblock %}
-    </div>
-</body>
+    <div class="content">{% block content %}{% endblock %}</div>
+  </body>
 </html>
