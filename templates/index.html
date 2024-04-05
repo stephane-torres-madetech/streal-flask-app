@@ -1,8 +1,28 @@
 {% extends 'base.html' %} {% block content %}
-<h1>Fairlight Strael 3.0</h1>
+<h1>{% block title %}Fairlight Strael 3.0{% endblock %}</h1>
 <img
   src="{{url_for('static', filename='/imgs/FAIRLIGHT-Strael-main.jpeg')}}"
   alt="Image of a Fairlight Strael roadbike"
   class="main-image"
 />
+<section class="hero">
+  <h3>Ode to my Streal</h3>
+    <p>From the old English for arrow, you sure do make me feel like I'm flying.</p>
+    <p>They say "steel is real", out for a ride on you is about as real as I'll feel.</p>
+    <p>You're my escape, my adventure, you're my desire to go and explore.</p>
+</section>
+<section class="main"></section>
+<footer>
+  <h3>What do you think? Hot or Not!</h3>
+  <div class="opinions">
+    <div class="opinion">
+      <input type="radio" name="hot_or_not" id="hot" value="hot" checked />
+      <label for="hot" alt="hot" class="emoji emoji-hot">&#x1F525;</label>
+    </div>
+    <div class="opinion">
+      <input type="radio" name="hot_or_not" id="not" value="not" />
+      <label for="not" alt="not" class="emoji emoji-not">&#x1F44E;</label>
+    </div>
+  </div>
+</footer>
 {% endblock %}
