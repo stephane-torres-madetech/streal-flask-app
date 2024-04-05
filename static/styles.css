@@ -6,6 +6,14 @@
   --secondary-colour-triadic-500: #a33cc2;
   font-family: Arial, Helvetica, sans-serif;
 }
+/* input[type="radio"] {
+  display: none;
+} */
+
+#not:checked ~ .emoji-not,
+#hot:checked ~ .emoji-hot {
+  font-size: 4rem;
+}
 
 body {
   background-color: var(--primary-backgroud-colour-50);
@@ -125,9 +133,20 @@ body {
           width: 75%;
           height: auto;
         }
-        #not:checked ~ .emoji-not,
-        #hot:checked ~ .emoji-hot {
-          font-size: 4rem;
+
+        .emoji {
+          font-size: 2rem;
+        }
+
+        h3 {
+          margin-bottom: 0;
+        }
+
+        .opinions {
+          display: flex;
+          padding-bottom: 1.5rem;
+          width: 50%;
+          height: 5rem;
         }
       }
     }
