@@ -8,7 +8,7 @@
 <body>
     <nav>
         {% for pages in navigation %}
-            <a href={{pages.path}}>{{pages.name}}</a>
+            <a href="{{ url_for({{pages.path}}) }}">{{pages.name}}</a>
     </nav>
 </body>
 </html>
