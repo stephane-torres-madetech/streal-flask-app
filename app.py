@@ -21,6 +21,10 @@ def hello():
 def gallery():
     return render_template('gallery.html')
 
+@app.route('/info/')
+def info():
+    return render_template('info.html')
+
 
 
 

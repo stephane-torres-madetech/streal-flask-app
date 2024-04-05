@@ -29,7 +29,15 @@ body {
     grid-template-columns: 1fr;
 
     nav {
+        padding: 0 1rem;
+        height: 3rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
       a {
+        img{
+            width: 2rem;
+        }
         span {
           display: none;
           content: '';
