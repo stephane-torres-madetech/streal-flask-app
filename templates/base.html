@@ -4,12 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}{% endblock %}</title>
+    <style>
+        nav a {
+            color: #d64161;
+            font-size: 3em;
+            margin-left: 50px;
+            text-decoration: none;
+        }
+    </style>
 </head>
 <body>
     <nav>
-        {% for pages in navigation %}
-            <a href="{{url_for({{pages.path}})}}">{{pages.name}}</a>
-        {% endfor %}
+        
+            <a href="{{url_for('hello')}}">Home</a>
+            <a href="{{url_for('gallery')}}">Gallery</a>
+        
     </nav>
     <div class="content">
         {% block content %}{% endblock %}
