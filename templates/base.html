@@ -8,8 +8,8 @@
   </head>
   <body>
     <nav>
-      <a href="{{url_for('hello')}}"><img src="{{url_for('static', filename='/imgs/home.svg')}}" alt="home button"></a>
-      <a href="{{url_for('gallery')}}"><img src="{{url_for('static', filename='/imgs/gallery.svg')}}" alt="gallery button"></a>
+      <a href="{{url_for('hello')}}"><img src="{{url_for('static', filename='/imgs/home.svg')}}" alt="home button" class="nav_icon"><span class="nav-title">Home</span></a>
+      <a href="{{url_for('gallery')}}"><img src="{{url_for('static', filename='/imgs/gallery.svg')}}" alt="gallery button" class="nav_icon"><span class="nav-title">Gallery</span></a>
     </nav>
     <div class="content">{% block content %}{% endblock %}</div>
   </body>

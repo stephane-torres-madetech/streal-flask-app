@@ -1,10 +1,43 @@
 :root {
-    --primary-text-colour-500: #3c5cc2;
-    --primary-backgroud-colour-50: #e9ecf8;
-    --complementary-colour-800: #c2a33c;
-    --complementary-colour-500: #fbe04d;
-    --secondary-colour-triadic-500: #a33cc2;
-    font-family: Arial, Helvetica, sans-serif;
-  }
+  --primary-colour-500: #3c5cc2;
+  --primary-backgroud-colour-50: #e9ecf8;
+  --complementary-colour-800: #c2a33c;
+  --complementary-colour-500: #fbe04d;
+  --secondary-colour-triadic-500: #a33cc2;
+  font-family: Arial, Helvetica, sans-serif;
+}
 
-  
+body {
+  background-color: var(--primary-backgroud-colour-50);
+
+  nav {
+    background-color: var(--primary-colour-500);
+    a {
+      text-decoration: none;
+      color: var(--complementary-colour-800);
+
+      span {
+        color: var(--complementary-colour-800);
+      }
+    }
+  }
+}
+
+@media screen and (max-width="633px") {
+  body {
+    display: grid;
+    grid-template-columns: 1fr;
+
+    nav {
+      a {
+        span {
+          display: none;
+          content: '';
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width="749px") {
+}
