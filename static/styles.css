@@ -9,7 +9,11 @@
 
 body {
   background-color: var(--primary-backgroud-colour-50);
-
+ 
+  h1{
+    color: var(--primary-colour-500);
+    text-align: center;
+  }
   nav {
     background-color: var(--primary-colour-500);
     a {
@@ -43,6 +47,9 @@ body {
           content: '';
         }
       }
+    }
+    .main-image{
+        max-width: 100%;
     }
   }
 }

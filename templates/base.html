@@ -10,7 +10,7 @@
     <nav>
       <a href="{{url_for('hello')}}"><img src="{{url_for('static', filename='/imgs/home.svg')}}" alt="home button" class="nav_icon"><span class="nav-title">Home</span></a>
       <a href="{{url_for('gallery')}}"><img src="{{url_for('static', filename='/imgs/gallery.svg')}}" alt="gallery button" class="nav_icon"><span class="nav-title">Gallery</span></a>
-      <a href=""><img src="{{url_for('static', filename='/imgs/info.svg')}}" alt="" class="nav_icon"><span class="nav-title">Info</span></a>
+      <a href="{{url_for('info')}}"><img src="{{url_for('static', filename='/imgs/info.svg')}}" alt="" class="nav_icon"><span class="nav-title">Info</span></a>
     </nav>
     <div class="content">{% block content %}{% endblock %}</div>
   </body>
