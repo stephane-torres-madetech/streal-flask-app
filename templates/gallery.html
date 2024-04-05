@@ -1,12 +1,26 @@
-{% extends 'base.html' %}
-
-{% block content %}
-    <h1>{% block title %}Gallery{% endblock %}</h1>
-    <section class="gallery">
-        {% for image in images %}
-            <div class="card">
-                <img src="{{url_for('static', filename='imgs/gallery_images/' + image)}}" alt="">
-            </div>
-        {% endfor %}
-    </section>
+{% extends 'base.html' %} {% block content %}
+<h1>{% block title %}Gallery{% endblock %}</h1>
+<section class="gallery">
+  {% for image in images %}
+  <div class="card">
+    <img
+      src="{{url_for('static', filename='imgs/gallery_images/' + image)}}"
+      alt="streal image"
+    />
+    <h3>{{ image }}</h3>
+    <!-- this is a string so we can do some manipulation to remove - and .jpeg -->
+    <h3>What do you think? Hot or Not!</h3>
+    <div class="opinions">
+      <div class="opinion">
+        <input type="radio" name="hot_or_not" id="hot" value="hot" checked />
+        <label for="hot" alt="hot" class="emoji emoji-hot">&#x1F525;</label>
+      </div>
+      <div class="opinion">
+        <input type="radio" name="hot_or_not" id="not" value="not" />
+        <label for="not" alt="not" class="emoji emoji-not">&#x1F44E;</label>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</section>
 {% endblock %}
