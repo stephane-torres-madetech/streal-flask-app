@@ -13,6 +13,7 @@ input[type="radio"] {
 input[type="radio"]:checked + .emoji-not,
 input[type="radio"]:checked + .emoji-hot {
   font-size: 4rem;
+  transition: font-size 300ms ease-in;
 }
 
 body {
@@ -42,6 +43,10 @@ body {
         color: var(--complementary-colour-800);
       }
     }
+  }
+
+  label{
+    transition: font-size 300ms ease-out;
   }
 }
 
@@ -147,6 +152,7 @@ body {
           padding-bottom: 1.5rem;
           width: 50%;
           height: 5rem;
+          justify-content: space-between;
         }
         input[type="radio"]:checked + .emoji-not,
         input[type="radio"]:checked + .emoji-hot {
