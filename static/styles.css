@@ -168,6 +168,30 @@ body {
 
 @media screen and (min-width: 1094px) {
   body {
+    max-width: 100vw;
+    margin: 0;
+
+    .content {
+      padding-top: 3.5rem;
+      display: grid;
+      grid-template-areas:
+        "header header"
+        "hero image"
+        "main main";
+
+      .hero {
+        grid-area: hero;
+        margin: 0 1rem;
+        padding: 0 1rem;
+        background-color: var(--secondary-colour-triadic-500);
+        color: white;
+
+        p {
+          margin: 0;
+        }
+      }
+    }
+
     nav {
       position: fixed;
       width: 100%;
@@ -176,7 +200,7 @@ body {
       display: flex;
       align-items: center;
       justify-content: space-evenly;
-      a{
+      a {
         display: flex;
         align-items: center;
         img {
@@ -190,11 +214,21 @@ body {
       }
     }
 
+    h1 {
+      grid-area: header;
+    }
+
+    .main-image {
+      grid-area: image;
+      width: 90%;
+    }
+
     .gallery {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       max-width: 100%;
       gap: 1rem;
+      margin: 2rem;
 
       .card {
         background-color: rgba(163, 60, 194, 0.5);
@@ -202,17 +236,26 @@ body {
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: space-between;
         padding-top: 10%;
-        img {
-          width: 75%;
-          border-radius: 7px;
+        .top {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          img {
+            width: 75%;
+            border-radius: 7px;
+            max-height: 45%;
+          }
         }
+
         .opinions {
           display: flex;
           padding-bottom: 1.5rem;
           width: 50%;
           height: 5rem;
           justify-content: space-between;
+          align-content: baseline;
         }
         input[type="radio"]:checked + .emoji-not,
         input[type="radio"]:checked + .emoji-hot {

@@ -3,13 +3,15 @@
 <section class="gallery">
   {% for image in images %}
   <div class="card">
-    <img
-      src="{{url_for('static', filename='imgs/gallery_images/' + image)}}"
-      alt="streal image"
-    />
-    <h3>{{ image }}</h3>
-    <!-- this is a string so we can do some manipulation to remove - and .jpeg -->
-    <h3>What do you think? Hot or Not!</h3>
+    <div class="top">
+      <img
+        src="{{url_for('static', filename='imgs/gallery_images/' + image)}}"
+        alt="streal image"
+      />
+      <h3>{{ image }}</h3>
+      <!-- this is a string so we can do some manipulation to remove - and .jpeg -->
+      <h3>What do you think? Hot or Not!</h3>
+    </div>
     <div class="opinions">
       <div class="opinion">
         <input
