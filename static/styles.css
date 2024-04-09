@@ -209,8 +209,16 @@ body {
         background-color: var(--secondary-colour-triadic-500);
         color: white;
 
+        h3{
+          font-size: 3rem;
+          text-align: center;
+          text-decoration: underline;
+        }
+
         p {
           margin: 0;
+          font-size: 1.75rem;
+          text-align: center;
         }
       }
       .main-image {
