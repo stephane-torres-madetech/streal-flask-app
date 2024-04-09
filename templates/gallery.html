@@ -10,31 +10,33 @@
       />
       <h3>{{ image }}</h3>
       <!-- this is a string so we can do some manipulation to remove - and .jpeg -->
-      <h3>What do you think? Hot or Not!</h3>
     </div>
-    <div class="opinions">
-      <div class="opinion">
-        <input
-          type="radio"
-          name="hot_or_not_{{loop.index}}"
-          id="hot_{{loop.index}}"
-          value="hot"
-          checked
-        />
-        <label for="hot_{{loop.index}}" alt="hot" class="emoji emoji-hot"
-          >&#x1F525;</label
-        >
-      </div>
-      <div class="opinion">
-        <input
-          type="radio"
-          name="hot_or_not_{{loop.index}}"
-          id="not_{{loop.index}}"
-          value="not"
-        />
-        <label for="not_{{loop.index}}" alt="not" class="emoji emoji-not"
-          >&#x1F44E;</label
-        >
+    <div class="bottom">
+      <h3>What do you think? Hot or Not!</h3>
+      <div class="opinions">
+        <div class="opinion">
+          <input
+            type="radio"
+            name="hot_or_not_{{loop.index}}"
+            id="hot_{{loop.index}}"
+            value="hot"
+            checked
+          />
+          <label for="hot_{{loop.index}}" alt="hot" class="emoji emoji-hot"
+            >&#x1F525;</label
+          >
+        </div>
+        <div class="opinion">
+          <input
+            type="radio"
+            name="hot_or_not_{{loop.index}}"
+            id="not_{{loop.index}}"
+            value="not"
+          />
+          <label for="not_{{loop.index}}" alt="not" class="emoji emoji-not"
+            >&#x1F44E;</label
+          >
+        </div>
       </div>
     </div>
   </div>
