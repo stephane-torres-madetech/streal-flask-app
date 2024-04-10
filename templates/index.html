@@ -7,21 +7,40 @@
 />
 <section class="hero">
   <h3>Ode to my Streal</h3>
-    <p>"From the old English for arrow, you sure do make me feel like I'm flying.</p>
-    <p>They say "steel is real", out for a ride on you is about as real as I'll feel.</p>
-    <p>You're my escape, my adventure, you're my desire to go and explore."</p>
+  <p>
+    "From the old English for arrow, you sure do make me feel like I'm flying.
+  </p>
+  <p>
+    They say "steel is real", out for a ride on you is about as real as I'll
+    feel.
+  </p>
+  <p>You're my escape, my adventure, you're my desire to go and explore."</p>
 </section>
 <section class="main"></section>
 <footer>
   <h3>What do you think? Hot or Not!</h3>
   <div class="opinions">
     <div class="opinion">
-      <input type="radio" name="hot_or_not" id="hot" value="hot" checked/>
-      <label for="hot" alt="hot" class="emoji emoji-hot">&#x1F525;</label>
+      <input
+        type="radio"
+        name="hot_or_not_main"
+        id="hot_main"
+        value="hot"
+        checked
+        onclick="setOpinionStyle(name, 'result_main')"
+      />
+      <label for="hot_main" alt="hot" class="emoji emoji-hot">&#x1F525;</label>
     </div>
+    <p id="result_main"></p>
     <div class="opinion">
-      <input type="radio" name="hot_or_not" id="not" value="not" />
-      <label for="not" alt="not" class="emoji emoji-not">&#x1F44E;</label>
+      <input
+        type="radio"
+        name="hot_or_not_main"
+        id="not_main"
+        value="not"
+        onclick="setOpinionStyle(name, 'result_main')"
+      />
+      <label for="not_main" alt="not" class="emoji emoji-not">&#x1F44E;</label>
     </div>
   </div>
 </footer>
