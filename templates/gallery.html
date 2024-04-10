@@ -1,23 +1,24 @@
 {% extends 'base.html' %} {% block content %}
-<script>
+<script defer>
   function setOpinionStyle(radioGroupName, elementID) {
     const radioGroup = document.getElementsByName(radioGroupName);
     const element = document.getElementById(elementID);
 
-    console.log(radioGroup.value + "am i fired");
-    if (radioGroup.value == "hot") {
-      element.textContent = "HOT";
-      element.style.color = "red";
-      element.style.fontSize = "2rem";
-      element.style.fontWeight = "bold";
-    }
+    radioGroup.forEach((option) => {
+      if (option.value == "hot" && option.checked) {
+        element.textContent = "HOT";
+        element.style.color = "red";
+        element.style.fontSize = "2rem";
+        element.style.fontWeight = "bold";
+      }
 
-    if (radioGroup.textContent == "not") {
-      element.textContent = "not" + " \u2639";
-      element.style.color = "blue";
-      element.style.fontSize = "1.25rem";
-      element.style.fontWeight = "normal";
-    }
+      if (option.value == "not" && option.checked) {
+        element.textContent = "not" + " \u2639";
+        element.style.color = "blue";
+        element.style.fontSize = "1.25rem";
+        element.style.fontWeight = "normal";
+      }
+    });
   }
 </script>
 <h1>{% block title %}Gallery{% endblock %}</h1>
