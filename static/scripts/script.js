@@ -6,37 +6,35 @@ we have a loop index.
 
 can i get the id/group from a group from the event target?*/
 
-function getCheckedValue(radioGroup){
-   return radioGroup.value = 'hot'
+function getCheckedValue(radioGroup) {
+  return (radioGroup.value = "hot");
 }
 
+function setOpinionStyle(radioGroupName, elementID) {
+  const radioGroup = document.getElementsByName(radioGroupName);
+  const element = document.getElementById(elementID);
 
-
-function setOpinionStyle(radioGroupName ,elementID) {
-   const radioGroup = document.getElementsByName(radioGroupName)
-   const element = document.getElementById(elementID)
-    /* result text doesn't really exist yet. */
-    if (radioGroup.value == "hot") {
-      element.textContent = 'HOT'  
-      element.style.color = "red";
-      element.style.fontSize = "2rem";
-      element.style.fontWeight = "bold";
-    }
-  
-    if (radioGroup.textContent == "not") {
-      element.textContent = 'not' + " \u2639";
-      element.style.color = "blue";
-      element.style.fontSize = "1.25rem";
-      element.style.fontWeight = "normal";
-    }
+  if (radioGroup.value == "hot") {
+    element.textContent = "HOT";
+    element.style.color = "red";
+    element.style.fontSize = "2rem";
+    element.style.fontWeight = "bold";
   }
 
-  const radioInputs = document.getElementsByTagName('input')
-  console.log(radioInputs)
+  if (radioGroup.textContent == "not") {
+    element.textContent = "not" + " \u2639";
+    element.style.color = "blue";
+    element.style.fontSize = "1.25rem";
+    element.style.fontWeight = "normal";
+  }
+}
 
-  const radio = document.getElementsByName('hot_or_not')
-  console.log(radio);
-  /* radioGroup.forEach((option) => {
+const radioInputs = document.getElementsByTagName("input");
+console.log(radioInputs);
+
+const radio = document.getElementsByName("hot_or_not");
+console.log(radio);
+/* radioGroup.forEach((option) => {
     option.addEventListener("click", () => {
       if (option.checked) {
         resultText.textContent = `${option.value}`;

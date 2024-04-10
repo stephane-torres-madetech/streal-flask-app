@@ -1,4 +1,24 @@
 {% extends 'base.html' %} {% block content %}
+<script>
+  function setOpinionStyle(radioGroupName, elementID) {
+    const radioGroup = document.getElementsByName(radioGroupName);
+    const element = document.getElementById(elementID);
+
+    if (radioGroup.value == "hot") {
+      element.textContent = "HOT";
+      element.style.color = "red";
+      element.style.fontSize = "2rem";
+      element.style.fontWeight = "bold";
+    }
+
+    if (radioGroup.textContent == "not") {
+      element.textContent = "not" + " \u2639";
+      element.style.color = "blue";
+      element.style.fontSize = "1.25rem";
+      element.style.fontWeight = "normal";
+    }
+  }
+</script>
 <h1>{% block title %}Gallery{% endblock %}</h1>
 <section class="gallery">
   {% for image in images %}
@@ -21,12 +41,17 @@
             id="hot_{{loop.index}}"
             value="hot"
             checked
+            onclick="setOpinionStyle('hot_or_not_{{loop.index}}', 'result_{{loop.index}}')"
           />
-          <label for="hot_{{loop.index}}" alt="hot" class="emoji emoji-hot"
+          <label
+            for="hot_{{loop.index}}"
+            alt="hot"
+            class="emoji emoji-hot"
+            onclick="setOpinionStyle('hot_or_not_{{loop.index}}', 'result_{{loop.index}}')"
             >&#x1F525;</label
           >
         </div>
-        
+
         <p id="result_{{loop.index}}"></p>
         <div class="opinion">
           <input
@@ -34,6 +59,7 @@
             name="hot_or_not_{{loop.index}}"
             id="not_{{loop.index}}"
             value="not"
+            onclick="setOpinionStyle('hot_or_not_{{loop.index}}', 'result_{{loop.index}}')"
           />
           <label for="not_{{loop.index}}" alt="not" class="emoji emoji-not"
             >&#x1F44E;</label
