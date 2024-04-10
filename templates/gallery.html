@@ -4,6 +4,7 @@
     const radioGroup = document.getElementsByName(radioGroupName);
     const element = document.getElementById(elementID);
 
+    console.log(radioGroup.value + "am i fired");
     if (radioGroup.value == "hot") {
       element.textContent = "HOT";
       element.style.color = "red";
@@ -41,7 +42,7 @@
             id="hot_{{loop.index}}"
             value="hot"
             checked
-            onclick="setOpinionStyle('hot_or_not_{{loop.index}}', 'result_{{loop.index}}')"
+            onclick="setOpinionStyle(name, 'result_{{loop.index}}')"
           />
           <label
             for="hot_{{loop.index}}"
