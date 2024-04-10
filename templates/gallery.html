@@ -1,26 +1,5 @@
 {% extends 'base.html' %} {% block content %}
-<script defer>
-  function setOpinionStyle(radioGroupName, elementID) {
-    const radioGroup = document.getElementsByName(radioGroupName);
-    const element = document.getElementById(elementID);
 
-    radioGroup.forEach((option) => {
-      if (option.value == "hot" && option.checked) {
-        element.textContent = "HOT";
-        element.style.color = "red";
-        element.style.fontSize = "2rem";
-        element.style.fontWeight = "bold";
-      }
-
-      if (option.value == "not" && option.checked) {
-        element.textContent = "not" + " \u2639";
-        element.style.color = "blue";
-        element.style.fontSize = "1.25rem";
-        element.style.fontWeight = "normal";
-      }
-    });
-  }
-</script>
 <h1>{% block title %}Gallery{% endblock %}</h1>
 <section class="gallery">
   {% for image in images %}
@@ -49,7 +28,7 @@
             for="hot_{{loop.index}}"
             alt="hot"
             class="emoji emoji-hot"
-            onclick="setOpinionStyle('hot_or_not_{{loop.index}}', 'result_{{loop.index}}')"
+            onclick="setOpinionStyle('hot_or_not_{{loop.index}}', 'result_{{loop.index}}'); getCheckedValue()"
             >&#x1F525;</label
           >
         </div>
