@@ -30,6 +30,23 @@ body {
     color: var(--primary-colour-500);
     text-align: center;
   }
+  .opinions {
+    display: flex;
+    padding-bottom: 1.5rem;
+    width: 100%;
+    height: 5rem;
+    justify-content: space-between;
+    align-content: baseline;
+
+    label {
+      font-size: 2rem;
+    }
+
+    input[type="radio"]:checked + .emoji-not,
+    input[type="radio"]:checked + .emoji-hot {
+      font-size: 4rem;
+    }
+  }
 
   .gallery {
     h3 {
@@ -64,6 +81,12 @@ body {
 
   label {
     transition: font-size 300ms ease-out;
+  }
+
+  footer {
+    h3 {
+      text-align: center;
+    }
   }
 }
 
@@ -135,10 +158,9 @@ body {
     .gallery {
       display: grid;
       grid-template-columns: 1fr;
-      grid-auto-rows: .75fr;
+      grid-auto-rows: 0.75fr;
       justify-items: center;
       gap: 2rem;
-      
 
       .card {
         background-color: rgba(163, 60, 194, 0.5);
@@ -223,13 +245,20 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    .main-image {
+      width: 100%;
+      height: 100%;
+      opacity: 0.7;
+      z-index: -1;
+    }
   }
   .gallery {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-auto-rows: 62%;
     max-width: 100%;
-    
+
     gap: 0;
     justify-items: center;
 
