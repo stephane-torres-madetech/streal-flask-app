@@ -71,6 +71,7 @@ body {
         position: absolute;
         bottom: 10%;
         height: 3px;
+      
       }
 
       span {
@@ -106,7 +107,7 @@ body {
       a {
         &:hover::after {
           width: 2.5rem;
-          transform: translateX(-2.5rem);
+          
         }
         img {
           width: 2.5rem;
