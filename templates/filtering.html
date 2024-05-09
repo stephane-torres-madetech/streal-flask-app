@@ -4,11 +4,31 @@
 
 
 
-
 {% for person in list %}
     <p>{{ person.name }}</p>
     <p>{{ person.age }}</p>
 {% endfor %}
+
+<button onclick="openModal()">Filter</button>
+<dialog id="dialog">
+    <button onclick="closeModal()">Close</button>
+    <table>
+        <thead>
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Age</th>
+            </tr>
+            <tbody>
+            {% for person in filtered_list %}
+            <tr>
+                <th scope="row">{{person.name}}</th>
+                <th scope="row">{{person.age}}</th>
+            </tr>
+            {% endfor %}
+            </tbody>
+        </thead>
+    </table>
+</dialog>
 
 <div class="filter-restults">
     <h3>Results</h3>

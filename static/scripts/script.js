@@ -34,3 +34,12 @@ function createNewSpan(arr) {
     result.appendChild(info)
   });
 }
+
+const dialog = document.getElementById('dialog')
+function openModal(){
+  dialog.showModal()
+}
+
+function closeModal(){
+  dialog.close()
+}

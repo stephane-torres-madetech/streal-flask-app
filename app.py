@@ -30,7 +30,8 @@ def info():
 @app.route('/filtering/')
 def filtering():
     list_to_filter = [ {"name": "Steph", "age": 33}, {"name": "Alex", "age": 32}, {"name": "Nick", "age": 19}, {"name": "Jess", "age": 16}]
-    return render_template('filtering.html', list=list_to_filter)
+    filtered_list = list(filter(lambda person: person["age"] > 30, list_to_filter))
+    return render_template('filtering.html', list=list_to_filter, filtered_list=filtered_list)
 
 
 
