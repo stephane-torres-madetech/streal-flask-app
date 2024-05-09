@@ -1,5 +1,3 @@
-
-
 function setOpinionStyle(radioGroupName, elementID) {
   const radioGroup = document.getElementsByName(radioGroupName);
   const element = document.getElementById(elementID);
@@ -21,3 +19,18 @@ function setOpinionStyle(radioGroupName, elementID) {
   });
 }
 
+function filterOver30(arr) {
+  console.log(arr);
+  const result = arr.filter((person) => person.age > 30);
+  console.log(result);
+  createNewSpan(result);
+}
+
+const result = document.getElementById("result");
+function createNewSpan(arr) {
+  arr.forEach((person) => {
+    const info = document.createElement("span");
+    info.innerText = person.name + ", " + person.age;
+    result.appendChild(info)
+  });
+}

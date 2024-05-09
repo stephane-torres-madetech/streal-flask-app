@@ -1,0 +1,17 @@
+{% extends 'base.html' %} {% block content %}
+
+<button onclick="filterOver30( {{list}} )">Filter by over 30</button>
+
+
+
+
+{% for person in list %}
+    <p>{{ person.name }}</p>
+    <p>{{ person.age }}</p>
+{% endfor %}
+
+<div class="filter-restults">
+    <h3>Results</h3>
+    <div id="result"></div>
+</div>
+{% endblock %}

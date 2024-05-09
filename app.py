@@ -27,6 +27,11 @@ def gallery():
 def info():
     return render_template('info.html')
 
+@app.route('/filtering/')
+def filtering():
+    list_to_filter = [ {"name": "Steph", "age": 33}, {"name": "Alex", "age": 32}, {"name": "Nick", "age": 19}, {"name": "Jess", "age": 16}]
+    return render_template('filtering.html', list=list_to_filter)
+
 
 
 
