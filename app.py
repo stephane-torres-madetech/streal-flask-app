@@ -1,5 +1,6 @@
 from flask import Flask, render_template, g
 import os
+from dotenv import load_dotenv
 
 app = Flask(__name__)
 
@@ -12,10 +13,13 @@ navigation = [{"name" : "home", "path" : 'hello'},
               {"name" : 'gallery', "path" : 'gallery'},
               { "name" : "info", "path" : "./templates/info.html"}] """
 
+load_dotenv()
+secret = os.getenv("SECRET_PASSWORD")
+
 
 @app.route("/")
 def hello():
-    return render_template('index.html')
+    return render_template('index.html', secret=secret)
 
 
 @app.route("/gallery/")
